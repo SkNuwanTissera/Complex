@@ -24,4 +24,18 @@ class Fib extends Component {
             
         });
     }
+
+    render(){
+        return (
+            <div>
+                <form>
+                    <label>Enter your index:</label>
+                    <input/>
+                    <button>Submit</button>
+                </form>
+
+                <h3>Indexes I have seen: </h3>
+            </div>
+        );
+    }
 };
