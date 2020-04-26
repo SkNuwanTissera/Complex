@@ -25,16 +25,37 @@ class Fib extends Component {
         });
     }
 
+    renderSeenIndexes(){
+         return this.state.seenIndexes.map(({ number }) => number ).join(', ');
+    }
+
+    renderValues(){
+        const entries = [];
+
+        for(let key in this.state.values){
+            entries.push(
+                <div key={}>
+                    For index {key} I Calculated {this.state.values[key]}
+                </div>
+            );
+        }
+    }
+
     render(){
         return (
             <div>
                 <form>
                     <label>Enter your index:</label>
-                    <input/>
+                    <input/> 
                     <button>Submit</button>
                 </form>
 
                 <h3>Indexes I have seen: </h3>
+                {this.renderSeenIndexes()}
+
+                <h3> =Calculated values</h3>
+                {this.renderValues()}
+
             </div>
         );
     }
